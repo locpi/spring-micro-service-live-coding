@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'ducks'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./sql/init-tables.sql:/docker-entrypoint-initdb.d/1.sql
+      - ./sql/data-canards.sql:/docker-entrypoint-initdb.d/2.sql
+
