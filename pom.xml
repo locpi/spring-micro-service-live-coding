@@ -1,13 +1,13 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
+  <artifactId>epitech</artifactId>
+  <groupId>fr.ippon</groupId>
   <packaging>pom</packaging>
   <version>1</version>
   <modules>
     <module>tips</module>
-    <module>live-codfing</module>
+    <module>live-coding</module>
   </modules>
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
