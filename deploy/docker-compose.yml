@@ -13,4 +13,13 @@ services:
     volumes:
       - ./sql/init-tables.sql:/docker-entrypoint-initdb.d/1.sql
       - ./sql/data-canards.sql:/docker-entrypoint-initdb.d/2.sql
-
+  prometheus:
+    image: prom/prometheus:v2.1.0
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
