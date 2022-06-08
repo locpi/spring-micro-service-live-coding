@@ -1,8 +1,8 @@
-package fr.ippon.canards.service;
+package fr.ippon.ducks.service;
 
-import fr.ippon.canards.model.Duck;
-import fr.ippon.canards.model.DuckColor;
-import fr.ippon.canards.model.DuckSize;
+import fr.ippon.ducks.model.Duck;
+import fr.ippon.ducks.model.model.DuckColor;
+import fr.ippon.ducks.model.model.DuckSize;
 import java.util.List;
 
 

@@ -1,13 +1,12 @@
-package fr.ippon.canards.web;
+package fr.ippon.ducks.web;
 
-import static fr.ippon.canards.web.vm.OrderVm.mapFrom;
+import static fr.ippon.ducks.web.vm.OrderVm.mapFrom;
 import static java.util.stream.Collectors.toList;
 
-import fr.ippon.canards.service.OrderService;
-import fr.ippon.canards.web.vm.CreateOrderVm;
-import fr.ippon.canards.web.vm.OrderVm;
+import fr.ippon.ducks.service.OrderService;
+import fr.ippon.ducks.web.vm.CreateOrderVm;
+import fr.ippon.ducks.web.vm.OrderVm;
 import java.util.List;
-import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,4 +1,4 @@
-package fr.ippon.canards.model;
+package fr.ippon.ducks.model.model;
 
 import java.util.Arrays;
 import java.util.Optional;

@@ -1,6 +1,6 @@
-package fr.ippon.canards.service;
+package fr.ippon.ducks.service;
 
-import fr.ippon.canards.model.Order;
+import fr.ippon.ducks.model.Order;
 import java.util.List;
 
 

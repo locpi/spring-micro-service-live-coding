@@ -1,10 +1,10 @@
-package fr.ippon.canards.web;
+package fr.ippon.ducks.web;
 
-import fr.ippon.canards.model.Duck;
-import fr.ippon.canards.model.DuckColor;
-import fr.ippon.canards.model.DuckSize;
-import fr.ippon.canards.service.DuckService;
-import fr.ippon.canards.web.vm.CreateDuckVm;
+import fr.ippon.ducks.model.Duck;
+import fr.ippon.ducks.model.model.DuckColor;
+import fr.ippon.ducks.model.model.DuckSize;
+import fr.ippon.ducks.service.DuckService;
+import fr.ippon.ducks.web.vm.CreateDuckVm;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

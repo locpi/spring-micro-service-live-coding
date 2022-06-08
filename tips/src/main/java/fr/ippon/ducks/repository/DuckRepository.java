@@ -1,8 +1,8 @@
-package fr.ippon.canards.repository;
+package fr.ippon.ducks.repository;
 
-import fr.ippon.canards.model.Duck;
-import fr.ippon.canards.model.DuckColor;
-import fr.ippon.canards.model.DuckSize;
+import fr.ippon.ducks.model.Duck;
+import fr.ippon.ducks.model.model.DuckColor;
+import fr.ippon.ducks.model.model.DuckSize;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

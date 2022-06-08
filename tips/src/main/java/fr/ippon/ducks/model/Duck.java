@@ -1,5 +1,7 @@
-package fr.ippon.canards.model;
+package fr.ippon.ducks.model;
 
+import fr.ippon.ducks.model.model.DuckColor;
+import fr.ippon.ducks.model.model.DuckSize;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;

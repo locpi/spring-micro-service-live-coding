@@ -1,16 +1,15 @@
-package fr.ippon.canards.service.impl;
+package fr.ippon.ducks.service.impl;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
-import fr.ippon.canards.model.Duck;
-import fr.ippon.canards.model.DuckColor;
-import fr.ippon.canards.model.DuckSize;
-import fr.ippon.canards.repository.DuckRepository;
-import fr.ippon.canards.service.DuckService;
+import fr.ippon.ducks.model.Duck;
+import fr.ippon.ducks.model.model.DuckColor;
+import fr.ippon.ducks.model.model.DuckSize;
+import fr.ippon.ducks.repository.DuckRepository;
+import fr.ippon.ducks.service.DuckService;
 import java.util.List;
 import java.util.Optional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -40,7 +39,7 @@ public class DuckServiceImpl implements DuckService {
         }
 
         Optional<Duck> duckOptional = duckRepository.findBySizeAndColor(size, color);
-        Duck duckToSave = null;
+        Duck duckToSave ;
         if (duckOptional.isPresent()) {
             duckToSave = duckOptional.get();
             duckToSave.setStock(duckToSave.getStock() + stock);

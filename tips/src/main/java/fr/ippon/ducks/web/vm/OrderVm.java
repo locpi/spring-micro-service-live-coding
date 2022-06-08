@@ -1,6 +1,6 @@
-package fr.ippon.canards.web.vm;
+package fr.ippon.ducks.web.vm;
 
-import fr.ippon.canards.model.Order;
+import fr.ippon.ducks.model.Order;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package fr.ippon.canards.web.vm;
+package fr.ippon.ducks.web.vm;
 
 import lombok.Getter;
 import lombok.Setter;

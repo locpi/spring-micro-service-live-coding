@@ -1,4 +1,4 @@
-package fr.ippon.canards;
+package fr.ippon.ducks;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
