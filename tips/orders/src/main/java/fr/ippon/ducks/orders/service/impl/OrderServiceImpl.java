@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
         order.setQuantity(qtte);
         duck.setStock(duck.getStock() - qtte);
         duckOrderRepository.save(duck);
-        updateStockProducer.send(new UpdateStockMessage(duck.getReference(), duck.getStock()));
+        updateStockProducer.send(new UpdateStockMessage(duck.getReference(),qtte));
         return orderRepository.save(order);
     }
 

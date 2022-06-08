@@ -65,8 +65,12 @@ public class DuckServiceImpl implements DuckService {
     }
 
     @Override
+    @Transactional
     public void updateStock(String reference, int quantityToLess) {
-
+        duckRepository.findByReference(reference).ifPresent(duck -> {
+            duck.setStock(duck.getStock() - quantityToLess);
+            duckRepository.save(duck);
+        });
     }
 
 
