@@ -2,6 +2,7 @@ package fr.ippon.ducks.products.demo.service.impl;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 
+import fr.ippon.ducks.products.demo.event.consumer.CreateProductProducer;
 import fr.ippon.ducks.products.demo.model.Duck;
 import fr.ippon.ducks.products.demo.model.model.DuckColor;
 import fr.ippon.ducks.products.demo.model.model.DuckSize;
@@ -22,7 +23,7 @@ public class DuckServiceImpl implements DuckService {
 
     private final DuckRepository duckRepository;
 
-    private final CreateProductProduder reateProductProducer;
+    private final CreateProductProducer createProductProducer;
 
     @Override
     public List<Duck> getDucks() {
@@ -61,6 +62,11 @@ public class DuckServiceImpl implements DuckService {
         duckRepository.save(duckToSave);
         createProductProducer.send(duckToSave);
         return duckToSave;
+    }
+
+    @Override
+    public void updateStock(String reference, int quantityToLess) {
+
     }
 
 

@@ -12,4 +12,6 @@ public interface DuckService {
     List<Duck> getDucks();
 
     Duck createNewDuck(DuckColor color, DuckSize size, String slug, int stock, double price);
+
+    void updateStock(String reference,int quantityToLess);
 }

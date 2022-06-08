@@ -1,6 +1,7 @@
 package fr.ippon.ducks.orders.event.consumer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.ippon.ducks.orders.event.consumer.model.NewDuckMessage;
 import fr.ippon.ducks.orders.service.DuckOrderService;
@@ -25,6 +26,7 @@ public class CreateProductConsumer {
     @JmsListener(destination = "create_product")
     public void send(String message) {
         try {
+            mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
             NewDuckMessage newDuckMessage = mapper.readValue(message, NewDuckMessage.class);
             LOGGER.info(message);
             duckOrderService.registerNewDuckOrder(newDuckMessage.getReference(), newDuckMessage.getStock(), newDuckMessage.getPrice());
