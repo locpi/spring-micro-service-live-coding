@@ -1,3 +1,7 @@
+create database orders
+create database products
+
+--ddddd
 create table ducks_products
 (
 	id int,
