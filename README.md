@@ -34,5 +34,13 @@ Il faut donc lancer le main de :
 * OrdersApplication
 * ProductsApplication
 
+## Tester les apis
+
+Vous avez à votre disposition une collection postman à importer.
+
+```
+EPITECH.postman_collection.json
+```
+
 
 # À la moindre difficulté, ne pas hésiter à nous solliciter
