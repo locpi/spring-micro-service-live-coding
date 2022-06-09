@@ -1,6 +1,6 @@
 # spring-micro-service-live-codging
 
-##Pour demarrer les differentes stacks techniques
+## Pour demarrer les differentes stacks techniques
 
 Aller dans le dossier deploy et executer la commande suivate
 
