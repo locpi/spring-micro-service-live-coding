@@ -1,5 +1,14 @@
 # spring-micro-service-live-codging
 
+
+Des le debut du tp, merci de créér une branche avec comme nom
+
+```
+ epitech-<nom1>-<nom2>
+```
+
+et de commit reguliererement votre code. Il pourrait servir dans le cas d'une autre session
+
 ## Pour demarrer les differentes stacks techniques
 
 Aller dans le dossier deploy et executer la commande suivate
