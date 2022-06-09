@@ -1,0 +1,73 @@
+{
+	"variables": [],
+	"info": {
+		"name": "EPITECH",
+		"_postman_id": "9743adb7-6264-acb7-9a43-9397f0fa1663",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create order",
+			"request": {
+				"url": "http://localhost:8082/api/orders",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"reference\":\"BLUE-SMALL\",\n\t\"clientName\":\"PINCON\",\n\t\"qtte\":50\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list orders",
+			"request": {
+				"url": "http://localhost:8082/api/orders",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create products",
+			"request": {
+				"url": "http://localhost:8083/api/ducks",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"size\":\"SMALL\",\n\t\"color\":\"BLUE\",\n\t\"slug\":\"GOOD DUCK\",\n\t\"stock\":50,\n\t\"price\":16.0\n\t\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get products",
+			"request": {
+				"url": "http://localhost:8083/api/ducks",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

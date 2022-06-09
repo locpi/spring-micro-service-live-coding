@@ -1,8 +1,7 @@
-version: '3.3'
+version: '3.7'
 services:
   mysql:
     image: mysql:5.7
-    restart: always
     environment:
       MYSQL_DATABASE: 'ducks'
       MYSQL_USER: 'user'
@@ -11,6 +10,37 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - ./sql/init-tables.sql:/docker-entrypoint-initdb.d/1.sql
-      - ./sql/data-canards.sql:/docker-entrypoint-initdb.d/2.sql
-
+      - ./sql/create-database.sql:/docker-entrypoint-initdb.d/1.sql
+    networks:
+      internal-epitech:
+        ipv4_address: ${IP_MYSQL}
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
+  messagebroker:
+    image: rmohr/activemq:5.10.0
+    environment:
+      ACTIVEMQ_REMOVE_DEFAULT_ACCOUNT: "true"
+      ACTIVEMQ_ADMIN_LOGIN: admin
+      ACTIVEMQ_ADMIN_PASSWORD: password
+    ports:
+      - ${activeMqbroker}:61616
+      - ${activeMqweb}:8161
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          memory: 200MB
+    networks:
+      internal-epitech:
+        ipv4_address: ${IP_ACTIVE}
+networks:
+  internal-epitech:
+    driver: bridge
+    name: internal-epitech-${ENV}
+    ipam:
+      driver: default
+      config:
+        - subnet: ${networkSubnet}
