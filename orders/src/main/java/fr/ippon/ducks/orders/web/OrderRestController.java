@@ -31,7 +31,7 @@ public class OrderRestController {
     @PostMapping
     public OrderVm createDuck(@RequestBody CreateOrderVm createDuckVm) {
         return mapFrom(
-            orderService.createNewOrder(createDuckVm.getReference(), createDuckVm.getClientName(), createDuckVm.getQtte()));
+            orderService.createNewOrder(List.of(createDuckVm.getReference()), createDuckVm.getClientName()));
     }
 
 }
