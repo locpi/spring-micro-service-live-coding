@@ -1,10 +1,10 @@
-package com.example.livecoding;
+package fr.ippon.lc.orderslc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LiveCodingApplicationTests {
+class OrdersLcApplicationTests {
 
     @Test
     void contextLoads() {
